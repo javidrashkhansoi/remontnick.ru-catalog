@@ -3,24 +3,17 @@
 @use "../../variables/variables";
 
 .tab-nav {
+  background-image: linear-gradient(to right, variables.$color-999999, variables.$color-999999);
+  background-size: 100% 1px;
+  background-repeat: no-repeat;
+  background-position: bottom;
   overflow-x: auto;
   overflow-y: hidden;
 
   // .tab-nav__list
   &__list {
-    position: relative;
-    isolation: isolate;
     display: flex;
     align-items: center;
-
-    &::after {
-      content: "";
-      position: absolute;
-      inset-block-end: 1px;
-      inset-inline: 0;
-      z-index: -1;
-      border-block-end: 1px solid variables.$color-999999;
-    }
   }
 
   // .tab-nav__item
