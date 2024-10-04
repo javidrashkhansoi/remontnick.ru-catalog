@@ -6,7 +6,7 @@
   background-image: linear-gradient(to right, variables.$color-999999, variables.$color-999999);
   background-size: 100% 1px;
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position: 0 calc(100% - 1px);
   overflow-x: auto;
   overflow-y: hidden;
 
