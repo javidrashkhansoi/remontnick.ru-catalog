@@ -29,10 +29,119 @@
   // .catalog__tabs
   &__tabs {
     margin-block-end: functions.responsive-value(24, 16);
+
+    @media (max-width: 768px) {
+      margin-inline: -16px;
+    }
   }
 
   // .catalog__product-links
   &__product-links {
     margin-block-end: functions.responsive-value(24, 30);
+
+    @media (max-width: 768px) {
+      margin-inline: -16px;
+    }
+  }
+
+  // .catalog__inner
+  &__inner {
+    display: grid;
+    gap: 32px;
+
+    @media (min-width: #{992 + 0.1px}) {
+      grid-template-columns: 260px 1fr;
+    }
+  }
+
+  // .catalog__filter
+  &__filter {
+  }
+
+  // .catalog__products
+  &__products {
+    @media (max-width: 992px) {
+      margin-inline: -16px;
+    }
+  }
+
+  // .catalog__text
+  &__text {
+    margin-block-start: 112px;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+}
+
+.catalog-filter {
+}
+
+.catalog-products {
+  @media (max-width: 992px) {
+    padding-inline: 16px;
+    overflow: hidden;
+  }
+
+  // .catalog-products__actions
+  &__actions {
+    margin-block-end: functions.responsive-value(24, 10);
+  }
+
+  // .catalog-products__choices
+  &__choices {
+    margin-block-end: functions.responsive-value(24, 16);
+
+    @media (max-width: 992px) {
+      margin-inline: -16px;
+    }
+  }
+
+  // .catalog-products__text
+  &__text {
+    margin-block-start: 64px;
+
+    > *:not(:last-child) {
+      margin-block-end: 24px;
+    }
+
+    h2 {
+      margin-block-end: functions.responsive-value(16, 12);
+      font-weight: 500;
+      font-size: functions.responsive-value(18, 16);
+      line-height: 1.5;
+
+      @media (min-width: #{768 + 0.1px}) {
+        line-height: 1.33;
+      }
+    }
+
+    ul {
+      padding-inline-start: 1.5em;
+      list-style: disc;
+    }
+
+    @media (max-width: 768px) {
+      letter-spacing: 0.01em;
+    }
+  }
+}
+
+.catalog-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+
+  @media (min-width: #{992 + 0.1px}) {
+    justify-content: end;
+  }
+
+  // .catalog-actions__group
+  &__group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
   }
 }

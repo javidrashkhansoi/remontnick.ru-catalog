@@ -1,0 +1,37 @@
+@use "../../functions/functions";
+@use "../../mixins/mixins";
+@use "../../variables/variables";
+
+.filter-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  text-align: center;
+
+  @include mixins.prefers-reduced-motion {
+    transition-property: color;
+    transition-duration: 0.3s;
+  }
+
+  @include mixins.hover {
+    color: variables.$color-hover;
+  }
+
+  @media (min-width: #{992 + 0.1px}) {
+    display: none;
+  }
+
+  // .filter-button__icon
+  &__icon {
+    flex: 0 0 auto;
+    font-size: 0;
+  }
+
+  // .filter-button__text
+  &__text {
+  }
+}

@@ -1,0 +1,35 @@
+@use "../../functions/functions";
+@use "../../mixins/mixins";
+@use "../../variables/variables";
+
+.grid-buttons {
+  display: flex;
+  align-items: center;
+
+  @media (min-width: #{992 + 0.1px}) {
+    display: none;
+  }
+
+  // .grid-buttons__button
+  &__button {
+    flex: 0 0 auto;
+    font-size: 0;
+
+    &:not(&--active) {
+      color: variables.$color-999999;
+
+      @include mixins.hover {
+        color: variables.$color-hover;
+      }
+    }
+
+    @include mixins.prefers-reduced-motion {
+      transition-property: color;
+      transition-duration: 0.3s;
+    }
+
+    // .grid-buttons__button--active
+    &--active {
+    }
+  }
+}

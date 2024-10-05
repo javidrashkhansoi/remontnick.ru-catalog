@@ -10,6 +10,12 @@
   overflow-x: auto;
   overflow-y: hidden;
 
+  @media (max-width: 768px) {
+    padding-inline: 16px;
+    background-size: calc(100% - 16px) 1px;
+    background-position: 16px calc(100% - 1px);
+  }
+
   // .tab-nav__list
   &__list {
     display: flex;
