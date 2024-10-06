@@ -24,16 +24,28 @@
       <div class="product-images__pagination"></div>
     </div>
     <div class="product-card__tabs">
-      <button class="product-card__tab product-card__tab--active">Цена на отрез</button>
-      <button class="product-card__tab">Цена за рулон</button>
+      <button class="product-card__tab product-card__tab--active" data-price="cut">
+        <span class="product-card__tab-text product-card__tab-text--list">Цена на отрез</span>
+        <span class="product-card__tab-text product-card__tab-text--grid">Отрез</span>
+      </button>
+      <button class="product-card__tab" data-price="roll">
+        <span class="product-card__tab-text product-card__tab-text--list">Цена за рулон</span>
+        <span class="product-card__tab-text product-card__tab-text--grid">Рулон</span>
+      </button>
     </div>
     <div class="product-card__identification">
       <span class="product-card__id">ID: 2345467</span>
       <span class="product-card__class">Класс: 32</span>
     </div>
-    <div class="product-card__prices">
+    <div class="product-card__prices product-card__prices--active" data-price="cut">
+      <span class="product-card__prices-label">Цена:</span>
       <span class="product-card__price">187 руб./м2</span>
       <span class="product-card__price product-card__price--old">217 руб.</span>
+    </div>
+    <div class="product-card__prices" data-price="roll">
+      <span class="product-card__prices-label">Цена:</span>
+      <span class="product-card__price">178 руб./м2</span>
+      <span class="product-card__price product-card__price--old">271 руб.</span>
     </div>
     <p class="product-card__text">
       Линолеум Бытовой, Juteks, коллекция Avanta, «Fresco 5_FR22», коллекция Avanta, «Fresco 5_FR22», коллекция Avanta, «Fresco 5_FR22»

@@ -557,12 +557,12 @@
           </button>
           <div class="catalog-actions__group">
             <div class="grid-buttons">
-              <button class="grid-buttons__button" aria-label="#">
+              <button class="grid-buttons__button" aria-label="#" data-grid="grid">
                 <svg width="32" height="32" aria-hidden="true">
                   <use xlink:href="#icon-grid"></use>
                 </svg>
               </button>
-              <button class="grid-buttons__button grid-buttons__button--active" aria-label="#">
+              <button class="grid-buttons__button grid-buttons__button--active" aria-label="#" data-grid="list">
                 <svg width="32" height="32" aria-hidden="true">
                   <use xlink:href="#icon-list"></use>
                 </svg>
@@ -631,6 +631,25 @@
         </ul>
         <div class="catalog-products__inner">
           <ul class="catalog-products__list products-list">
+            <script>
+              const grid = localStorage.getItem("products-grid");
+              /** @type {HTMLUListElement} */
+              const productsList = document.querySelector(".products-list");
+
+              if (grid && productsList) {
+                /** @type {NodeListOf<HTMLButtonElement>} */
+                const gridButtons = document.querySelectorAll(".grid-buttons__button");
+
+                productsList.classList[grid === "grid" ? "add" : "remove"]("products-list--grid");
+
+                gridButtons.forEach(button => {
+                  const { dataset } = button;
+                  const { grid: buttonGrid } = dataset;
+
+                  button.classList.toggle("grid-buttons__button--active", grid === buttonGrid);
+                });
+              }
+            </script>
             @@include("product.html", { "image": 1 })
             @@include("product.html", { "image": 2 })
             @@include("product.html", { "image": 3 })
