@@ -72,6 +72,7 @@ body {
 
 html {
   @include mixins.prefers-reduced-motion {
+    interpolate-size: allow-keywords;
     scroll-behavior: smooth;
   }
 }

@@ -55,7 +55,496 @@
       </ul>
     </div>
     <div class="catalog__inner">
-      <div class="catalog__filter catalog-filter"></div>
+      <div class="catalog__filter catalog-filter">
+        <div class="catalog-filter__header">
+          <h2 class="catalog-filter__title filter-title">
+            <span class="filter-title__icon" aria-hidden="true">
+              <svg width="32" height="32">
+                <use xlink:href="#icon-filter"></use>
+              </svg>
+            </span>
+            <span class="filter-title__text filter-title__text--desktop">Фильтр подбора товара</span>
+            <span class="filter-title__text filter-title__text--mob">Фильтр</span>
+          </h2>
+          <button class="catalog-filter__close" aria-label="#"></button>
+        </div>
+        <form class="catalog-filter__form catalog-form" id="catalog-form" action="#">
+          <div class="catalog-spoilers" data-spoilers data-accordion="false">
+            <fieldset class="catalog-spoilers__item spoiler-active">
+              <legend class="catalog-spoilers__title">
+                <button class="catalog-spoilers__button" type="button" data-spoiler="button">
+                  <span class="catalog-spoilers__label">Цена</span>
+                  <span class="catalog-spoilers__icon" aria-hidden="true">
+                    <svg width="24" height="24">
+                      <use xlink:href="#icon-down"></use>
+                    </svg>
+                  </span>
+                </button>
+              </legend>
+              <div class="catalog-spoilers__region" data-spoiler="region">
+                <div class="catalog-spoilers__inner">
+                  <div class="catalog-spoilers__prices catalog-prices">
+                    <input class="catalog-prices__input" id="catalog-price-from" name="catalog-price-from" type="text" inputmode="decimal" placeholder="от 0 руб." aria-label="#" data-price
+                      data-prefix="от" data-suffix="руб.">
+                    <input class="catalog-prices__input" id="catalog-price-upto" name="catalog-price-upto" type="text" inputmode="decimal" placeholder="до 1000 руб." aria-label="#" data-price
+                      data-prefix="до" data-suffix="руб.">
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="catalog-spoilers__item spoiler-active">
+              <legend class="catalog-spoilers__title">
+                <button class="catalog-spoilers__button" type="button" data-spoiler="button">
+                  <span class="catalog-spoilers__label">Назначение</span>
+                  <span class="catalog-spoilers__icon" aria-hidden="true">
+                    <svg width="24" height="24">
+                      <use xlink:href="#icon-down"></use>
+                    </svg>
+                  </span>
+                </button>
+              </legend>
+              <div class="catalog-spoilers__region" data-spoiler="region">
+                <div class="catalog-spoilers__inner">
+                  <ul class="catalog-spoilers__checkboxes catalog-checkboxes">
+                    @@include("checkbox.html", { "id": 11 })
+                    @@include("checkbox.html", { "id": 12 })
+                    @@include("checkbox.html", { "id": 13 })
+                    @@include("checkbox.html", { "id": 14 })
+                    @@include("checkbox.html", { "id": 15 })
+                    @@include("checkbox.html", { "id": 16 })
+                  </ul>
+                  <button class="catalog-spoilers__more more-button" type="button">
+                    <span class="more-button__text" data-show-text="Показать ещё" data-hide-text="Показать меньше">Показать ещё</span>
+                    <span class="more-button__icon" aria-hidden="true">
+                      <svg width="24" height="24">
+                        <use xlink:href="#icon-down"></use>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="catalog-spoilers__item">
+              <legend class="catalog-spoilers__title">
+                <button class="catalog-spoilers__button" type="button" data-spoiler="button">
+                  <span class="catalog-spoilers__label">Основа линолиума</span>
+                  <span class="catalog-spoilers__icon" aria-hidden="true">
+                    <svg width="24" height="24">
+                      <use xlink:href="#icon-down"></use>
+                    </svg>
+                  </span>
+                </button>
+              </legend>
+              <div class="catalog-spoilers__region" data-spoiler="region">
+                <div class="catalog-spoilers__inner">
+                  <ul class="catalog-spoilers__checkboxes catalog-checkboxes">
+                    @@include("checkbox.html", { "id": 21 })
+                    @@include("checkbox.html", { "id": 22 })
+                    @@include("checkbox.html", { "id": 23 })
+                    @@include("checkbox.html", { "id": 24 })
+                    @@include("checkbox.html", { "id": 25 })
+                    @@include("checkbox.html", { "id": 26 })
+                  </ul>
+                  <button class="catalog-spoilers__more more-button" type="button">
+                    <span class="more-button__text" data-show-text="Показать ещё" data-hide-text="Показать меньше">Показать ещё</span>
+                    <span class="more-button__icon" aria-hidden="true">
+                      <svg width="24" height="24">
+                        <use xlink:href="#icon-down"></use>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="catalog-spoilers__item">
+              <legend class="catalog-spoilers__title">
+                <button class="catalog-spoilers__button" type="button" data-spoiler="button">
+                  <span class="catalog-spoilers__label">Бренд</span>
+                  <span class="catalog-spoilers__icon" aria-hidden="true">
+                    <svg width="24" height="24">
+                      <use xlink:href="#icon-down"></use>
+                    </svg>
+                  </span>
+                </button>
+              </legend>
+              <div class="catalog-spoilers__region" data-spoiler="region">
+                <div class="catalog-spoilers__inner">
+                  <ul class="catalog-spoilers__checkboxes catalog-checkboxes">
+                    @@include("checkbox.html", { "id": 31 })
+                    @@include("checkbox.html", { "id": 32 })
+                    @@include("checkbox.html", { "id": 33 })
+                    @@include("checkbox.html", { "id": 34 })
+                    @@include("checkbox.html", { "id": 35 })
+                    @@include("checkbox.html", { "id": 36 })
+                  </ul>
+                  <button class="catalog-spoilers__more more-button" type="button">
+                    <span class="more-button__text" data-show-text="Показать ещё" data-hide-text="Показать меньше">Показать ещё</span>
+                    <span class="more-button__icon" aria-hidden="true">
+                      <svg width="24" height="24">
+                        <use xlink:href="#icon-down"></use>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="catalog-spoilers__item">
+              <legend class="catalog-spoilers__title">
+                <button class="catalog-spoilers__button" type="button" data-spoiler="button">
+                  <span class="catalog-spoilers__label">Коллекция</span>
+                  <span class="catalog-spoilers__icon" aria-hidden="true">
+                    <svg width="24" height="24">
+                      <use xlink:href="#icon-down"></use>
+                    </svg>
+                  </span>
+                </button>
+              </legend>
+              <div class="catalog-spoilers__region" data-spoiler="region">
+                <div class="catalog-spoilers__inner">
+                  <ul class="catalog-spoilers__checkboxes catalog-checkboxes">
+                    @@include("checkbox.html", { "id": 41 })
+                    @@include("checkbox.html", { "id": 42 })
+                    @@include("checkbox.html", { "id": 43 })
+                    @@include("checkbox.html", { "id": 44 })
+                    @@include("checkbox.html", { "id": 45 })
+                    @@include("checkbox.html", { "id": 46 })
+                  </ul>
+                  <button class="catalog-spoilers__more more-button" type="button">
+                    <span class="more-button__text" data-show-text="Показать ещё" data-hide-text="Показать меньше">Показать ещё</span>
+                    <span class="more-button__icon" aria-hidden="true">
+                      <svg width="24" height="24">
+                        <use xlink:href="#icon-down"></use>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="catalog-spoilers__item">
+              <legend class="catalog-spoilers__title">
+                <button class="catalog-spoilers__button" type="button" data-spoiler="button">
+                  <span class="catalog-spoilers__label">Ширина рулона</span>
+                  <span class="catalog-spoilers__icon" aria-hidden="true">
+                    <svg width="24" height="24">
+                      <use xlink:href="#icon-down"></use>
+                    </svg>
+                  </span>
+                </button>
+              </legend>
+              <div class="catalog-spoilers__region" data-spoiler="region">
+                <div class="catalog-spoilers__inner">
+                  <ul class="catalog-spoilers__checkboxes catalog-checkboxes">
+                    @@include("checkbox.html", { "id": 51 })
+                    @@include("checkbox.html", { "id": 52 })
+                    @@include("checkbox.html", { "id": 53 })
+                    @@include("checkbox.html", { "id": 54 })
+                    @@include("checkbox.html", { "id": 55 })
+                    @@include("checkbox.html", { "id": 56 })
+                  </ul>
+                  <button class="catalog-spoilers__more more-button" type="button">
+                    <span class="more-button__text" data-show-text="Показать ещё" data-hide-text="Показать меньше">Показать ещё</span>
+                    <span class="more-button__icon" aria-hidden="true">
+                      <svg width="24" height="24">
+                        <use xlink:href="#icon-down"></use>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="catalog-spoilers__item">
+              <legend class="catalog-spoilers__title">
+                <button class="catalog-spoilers__button" type="button" data-spoiler="button">
+                  <span class="catalog-spoilers__label">Цвет/декор</span>
+                  <span class="catalog-spoilers__icon" aria-hidden="true">
+                    <svg width="24" height="24">
+                      <use xlink:href="#icon-down"></use>
+                    </svg>
+                  </span>
+                </button>
+              </legend>
+              <div class="catalog-spoilers__region" data-spoiler="region">
+                <div class="catalog-spoilers__inner">
+                  <ul class="catalog-spoilers__checkboxes catalog-checkboxes">
+                    @@include("checkbox.html", { "id": 61 })
+                    @@include("checkbox.html", { "id": 62 })
+                    @@include("checkbox.html", { "id": 63 })
+                    @@include("checkbox.html", { "id": 64 })
+                    @@include("checkbox.html", { "id": 65 })
+                    @@include("checkbox.html", { "id": 66 })
+                  </ul>
+                  <button class="catalog-spoilers__more more-button" type="button">
+                    <span class="more-button__text" data-show-text="Показать ещё" data-hide-text="Показать меньше">Показать ещё</span>
+                    <span class="more-button__icon" aria-hidden="true">
+                      <svg width="24" height="24">
+                        <use xlink:href="#icon-down"></use>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="catalog-spoilers__item">
+              <legend class="catalog-spoilers__title">
+                <button class="catalog-spoilers__button" type="button" data-spoiler="button">
+                  <span class="catalog-spoilers__label">Класс пожаробезопасности</span>
+                  <span class="catalog-spoilers__icon" aria-hidden="true">
+                    <svg width="24" height="24">
+                      <use xlink:href="#icon-down"></use>
+                    </svg>
+                  </span>
+                </button>
+              </legend>
+              <div class="catalog-spoilers__region" data-spoiler="region">
+                <div class="catalog-spoilers__inner">
+                  <ul class="catalog-spoilers__checkboxes catalog-checkboxes">
+                    @@include("checkbox.html", { "id": 71 })
+                    @@include("checkbox.html", { "id": 72 })
+                    @@include("checkbox.html", { "id": 73 })
+                    @@include("checkbox.html", { "id": 74 })
+                    @@include("checkbox.html", { "id": 75 })
+                    @@include("checkbox.html", { "id": 76 })
+                  </ul>
+                  <button class="catalog-spoilers__more more-button" type="button">
+                    <span class="more-button__text" data-show-text="Показать ещё" data-hide-text="Показать меньше">Показать ещё</span>
+                    <span class="more-button__icon" aria-hidden="true">
+                      <svg width="24" height="24">
+                        <use xlink:href="#icon-down"></use>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="catalog-spoilers__item">
+              <legend class="catalog-spoilers__title">
+                <button class="catalog-spoilers__button" type="button" data-spoiler="button">
+                  <span class="catalog-spoilers__label">Толщина линолеума</span>
+                  <span class="catalog-spoilers__icon" aria-hidden="true">
+                    <svg width="24" height="24">
+                      <use xlink:href="#icon-down"></use>
+                    </svg>
+                  </span>
+                </button>
+              </legend>
+              <div class="catalog-spoilers__region" data-spoiler="region">
+                <div class="catalog-spoilers__inner">
+                  <ul class="catalog-spoilers__checkboxes catalog-checkboxes">
+                    @@include("checkbox.html", { "id": 81 })
+                    @@include("checkbox.html", { "id": 82 })
+                    @@include("checkbox.html", { "id": 83 })
+                    @@include("checkbox.html", { "id": 84 })
+                    @@include("checkbox.html", { "id": 85 })
+                    @@include("checkbox.html", { "id": 86 })
+                  </ul>
+                  <button class="catalog-spoilers__more more-button" type="button">
+                    <span class="more-button__text" data-show-text="Показать ещё" data-hide-text="Показать меньше">Показать ещё</span>
+                    <span class="more-button__icon" aria-hidden="true">
+                      <svg width="24" height="24">
+                        <use xlink:href="#icon-down"></use>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="catalog-spoilers__item">
+              <legend class="catalog-spoilers__title">
+                <button class="catalog-spoilers__button" type="button" data-spoiler="button">
+                  <span class="catalog-spoilers__label">Толщина защитного слоя</span>
+                  <span class="catalog-spoilers__icon" aria-hidden="true">
+                    <svg width="24" height="24">
+                      <use xlink:href="#icon-down"></use>
+                    </svg>
+                  </span>
+                </button>
+              </legend>
+              <div class="catalog-spoilers__region" data-spoiler="region">
+                <div class="catalog-spoilers__inner">
+                  <ul class="catalog-spoilers__checkboxes catalog-checkboxes">
+                    @@include("checkbox.html", { "id": 91 })
+                    @@include("checkbox.html", { "id": 92 })
+                    @@include("checkbox.html", { "id": 93 })
+                    @@include("checkbox.html", { "id": 94 })
+                    @@include("checkbox.html", { "id": 95 })
+                    @@include("checkbox.html", { "id": 96 })
+                  </ul>
+                  <button class="catalog-spoilers__more more-button" type="button">
+                    <span class="more-button__text" data-show-text="Показать ещё" data-hide-text="Показать меньше">Показать ещё</span>
+                    <span class="more-button__icon" aria-hidden="true">
+                      <svg width="24" height="24">
+                        <use xlink:href="#icon-down"></use>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="catalog-spoilers__item">
+              <legend class="catalog-spoilers__title">
+                <button class="catalog-spoilers__button" type="button" data-spoiler="button">
+                  <span class="catalog-spoilers__label">Решения</span>
+                  <span class="catalog-spoilers__icon" aria-hidden="true">
+                    <svg width="24" height="24">
+                      <use xlink:href="#icon-down"></use>
+                    </svg>
+                  </span>
+                </button>
+              </legend>
+              <div class="catalog-spoilers__region" data-spoiler="region">
+                <div class="catalog-spoilers__inner">
+                  <ul class="catalog-spoilers__checkboxes catalog-checkboxes">
+                    @@include("checkbox.html", { "id": 101 })
+                    @@include("checkbox.html", { "id": 102 })
+                    @@include("checkbox.html", { "id": 103 })
+                    @@include("checkbox.html", { "id": 104 })
+                    @@include("checkbox.html", { "id": 105 })
+                    @@include("checkbox.html", { "id": 106 })
+                  </ul>
+                  <button class="catalog-spoilers__more more-button" type="button">
+                    <span class="more-button__text" data-show-text="Показать ещё" data-hide-text="Показать меньше">Показать ещё</span>
+                    <span class="more-button__icon" aria-hidden="true">
+                      <svg width="24" height="24">
+                        <use xlink:href="#icon-down"></use>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="catalog-spoilers__item">
+              <legend class="catalog-spoilers__title">
+                <button class="catalog-spoilers__button" type="button" data-spoiler="button">
+                  <span class="catalog-spoilers__label">Класс применения</span>
+                  <span class="catalog-spoilers__icon" aria-hidden="true">
+                    <svg width="24" height="24">
+                      <use xlink:href="#icon-down"></use>
+                    </svg>
+                  </span>
+                </button>
+              </legend>
+              <div class="catalog-spoilers__region" data-spoiler="region">
+                <div class="catalog-spoilers__inner">
+                  <ul class="catalog-spoilers__checkboxes catalog-checkboxes">
+                    @@include("checkbox.html", { "id": 111 })
+                    @@include("checkbox.html", { "id": 112 })
+                    @@include("checkbox.html", { "id": 113 })
+                    @@include("checkbox.html", { "id": 114 })
+                    @@include("checkbox.html", { "id": 115 })
+                    @@include("checkbox.html", { "id": 116 })
+                  </ul>
+                  <button class="catalog-spoilers__more more-button" type="button">
+                    <span class="more-button__text" data-show-text="Показать ещё" data-hide-text="Показать меньше">Показать ещё</span>
+                    <span class="more-button__icon" aria-hidden="true">
+                      <svg width="24" height="24">
+                        <use xlink:href="#icon-down"></use>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="catalog-spoilers__item">
+              <legend class="catalog-spoilers__title">
+                <button class="catalog-spoilers__button" type="button" data-spoiler="button">
+                  <span class="catalog-spoilers__label">Акция</span>
+                  <span class="catalog-spoilers__icon" aria-hidden="true">
+                    <svg width="24" height="24">
+                      <use xlink:href="#icon-down"></use>
+                    </svg>
+                  </span>
+                </button>
+              </legend>
+              <div class="catalog-spoilers__region" data-spoiler="region">
+                <div class="catalog-spoilers__inner">
+                  <ul class="catalog-spoilers__checkboxes catalog-checkboxes">
+                    @@include("checkbox.html", { "id": 121 })
+                    @@include("checkbox.html", { "id": 122 })
+                    @@include("checkbox.html", { "id": 123 })
+                    @@include("checkbox.html", { "id": 124 })
+                    @@include("checkbox.html", { "id": 125 })
+                    @@include("checkbox.html", { "id": 126 })
+                  </ul>
+                  <button class="catalog-spoilers__more more-button" type="button">
+                    <span class="more-button__text" data-show-text="Показать ещё" data-hide-text="Показать меньше">Показать ещё</span>
+                    <span class="more-button__icon" aria-hidden="true">
+                      <svg width="24" height="24">
+                        <use xlink:href="#icon-down"></use>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="catalog-spoilers__item">
+              <legend class="catalog-spoilers__title">
+                <button class="catalog-spoilers__button" type="button" data-spoiler="button">
+                  <span class="catalog-spoilers__label">Остатки</span>
+                  <span class="catalog-spoilers__icon" aria-hidden="true">
+                    <svg width="24" height="24">
+                      <use xlink:href="#icon-down"></use>
+                    </svg>
+                  </span>
+                </button>
+              </legend>
+              <div class="catalog-spoilers__region" data-spoiler="region">
+                <div class="catalog-spoilers__inner">
+                  <ul class="catalog-spoilers__checkboxes catalog-checkboxes">
+                    @@include("checkbox.html", { "id": 131 })
+                    @@include("checkbox.html", { "id": 132 })
+                    @@include("checkbox.html", { "id": 133 })
+                    @@include("checkbox.html", { "id": 134 })
+                    @@include("checkbox.html", { "id": 135 })
+                    @@include("checkbox.html", { "id": 136 })
+                  </ul>
+                  <button class="catalog-spoilers__more more-button" type="button">
+                    <span class="more-button__text" data-show-text="Показать ещё" data-hide-text="Показать меньше">Показать ещё</span>
+                    <span class="more-button__icon" aria-hidden="true">
+                      <svg width="24" height="24">
+                        <use xlink:href="#icon-down"></use>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="catalog-spoilers__item">
+              <legend class="catalog-spoilers__title">
+                <button class="catalog-spoilers__button" type="button" data-spoiler="button">
+                  <span class="catalog-spoilers__label">Оптом</span>
+                  <span class="catalog-spoilers__icon" aria-hidden="true">
+                    <svg width="24" height="24">
+                      <use xlink:href="#icon-down"></use>
+                    </svg>
+                  </span>
+                </button>
+              </legend>
+              <div class="catalog-spoilers__region" data-spoiler="region">
+                <div class="catalog-spoilers__inner">
+                  <ul class="catalog-spoilers__checkboxes catalog-checkboxes">
+                    @@include("checkbox.html", { "id": 141 })
+                    @@include("checkbox.html", { "id": 142 })
+                    @@include("checkbox.html", { "id": 143 })
+                    @@include("checkbox.html", { "id": 144 })
+                    @@include("checkbox.html", { "id": 145 })
+                    @@include("checkbox.html", { "id": 146 })
+                  </ul>
+                  <button class="catalog-spoilers__more more-button" type="button">
+                    <span class="more-button__text" data-show-text="Показать ещё" data-hide-text="Показать меньше">Показать ещё</span>
+                    <span class="more-button__icon" aria-hidden="true">
+                      <svg width="24" height="24">
+                        <use xlink:href="#icon-down"></use>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <button class="catalog-form__button catalog-form__button--reset" type="reset">Сбросить фильтры</button>
+          <button class="catalog-form__button catalog-form__button--submit" type="submit">Применить</button>
+        </form>
+      </div>
       <div class="catalog__products catalog-products">
         <div class="catalog-products__actions catalog-actions">
           <button class="filter-button">

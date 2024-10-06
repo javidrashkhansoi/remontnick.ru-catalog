@@ -14,5 +14,12 @@ body {
 
   .scroll-lock & {
     overflow: hidden;
+
+    &::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 500;
+    }
   }
 }
