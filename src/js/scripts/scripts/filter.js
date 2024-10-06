@@ -1,5 +1,6 @@
 import { Scrolling } from "../../modules/scrolling.js";
 
+const minWidth992 = matchMedia("(min-width: 992.1px)");
 /** @type {HTMLElement} */
 const filter = document.querySelector(".catalog-filter");
 /** @type {HTMLButtonElement} */
@@ -27,6 +28,12 @@ document.addEventListener("click", (event) => {
   const { target } = event;
 
   if (!target.closest(".catalog-filter") && !target.closest(".filter-button")) closeFilter();
+});
+
+minWidth992.addEventListener("change", (event) => {
+  const { matches } = event;
+
+  if (matches) closeFilter();
 });
 
 function closeFilter() {
