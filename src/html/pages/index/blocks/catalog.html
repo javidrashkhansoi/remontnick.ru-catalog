@@ -663,6 +663,27 @@
             @@include("product.html", { "image": 11 })
             @@include("product.html", { "image": 12 })
           </ul>
+          <button class="catalog-products__more">Показать еще</button>
+          <div class="catalog-products__pagination products-pagination">
+            <a class="products-pagination__arrow products-pagination__arrow--prev" href="#">
+              <svg width="24" height="24" aria-hidden="true">
+                <use xlink:href="#icon-arrow"></use>
+              </svg>
+            </a>
+            <div class="products-pagination__inner">
+              <a class="products-pagination__link products-pagination__link--active" href="" aria-current="page">1</a>
+              <a class="products-pagination__link" href="#">2</a>
+              <a class="products-pagination__link products-pagination__link--hide" href="#">3</a>
+              <a class="products-pagination__link products-pagination__link--hide" href="#">4</a>
+              <span class="products-pagination__link">...</span>
+              <a class="products-pagination__link" href="#">100</a>
+            </div>
+            <a class="products-pagination__arrow products-pagination__arrow--next" href="#">
+              <svg width="24" height="24" aria-hidden="true">
+                <use xlink:href="#icon-arrow"></use>
+              </svg>
+            </a>
+          </div>
         </div>
         <div class="catalog-products__text">
           <p>

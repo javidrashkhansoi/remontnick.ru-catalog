@@ -5,3 +5,5 @@ import "./scripts/filter.js";
 import "./scripts/products-grid.js";
 import "./scripts/prices.js";
 import "./scripts/radios.js";
+import "./scripts/actions.js";
+import "./scripts/products-more.js";
