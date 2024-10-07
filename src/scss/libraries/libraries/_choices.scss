@@ -185,11 +185,13 @@
       }
 
       &.is-highlighted {
-        color: variables.$color-hover;
-        background: none;
+        @media (hover: hover) {
+          color: variables.$color-hover;
+          background: none;
 
-        &::before {
-          border-color: variables.$color-hover;
+          &::before {
+            border-color: variables.$color-hover;
+          }
         }
       }
 
@@ -231,13 +233,15 @@
         }
 
         &.is-highlighted {
-          &::before {
-            background-image: radial-gradient(
-              circle at 50% 50%,
-              variables.$color-hover 0,
-              variables.$color-hover 5px,
-              variables.$color-white 5.1px
-            );
+          @media (hover: hover) {
+            &::before {
+              background-image: radial-gradient(
+                circle at 50% 50%,
+                variables.$color-hover 0,
+                variables.$color-hover 5px,
+                variables.$color-white 5.1px
+              );
+            }
           }
         }
       }
