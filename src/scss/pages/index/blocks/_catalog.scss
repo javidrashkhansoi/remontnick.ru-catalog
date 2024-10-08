@@ -464,6 +464,19 @@
   &__text {
   }
 
+  // .catalog-checkbox__image
+  &__image {
+    flex: 0 0 auto;
+    inline-size: 19px;
+    aspect-ratio: 19 / 16;
+    margin-inline-start: auto;
+    font-size: 0;
+
+    img {
+      object-fit: contain;
+    }
+  }
+
   // .catalog-checkbox__input
   &__input {
   }
