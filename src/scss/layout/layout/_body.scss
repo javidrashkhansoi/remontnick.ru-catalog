@@ -22,4 +22,12 @@ body {
       z-index: 500;
     }
   }
+
+  * {
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
 }
