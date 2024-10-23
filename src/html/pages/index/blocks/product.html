@@ -58,8 +58,25 @@
       <span class="product-card__country">Бельгия</span>
     </div>
     <div class="product-card__length product-length">
-      <div class="product-length__label">Ширина</div>
+      <button class="product-length__button length-button" aria-label="#">
+        <span class="length-button__label">Ширина</span>
+        <span class="length-button__value">1.5м</span>
+        <span class="length-button__icon" aria-hidden="true">
+          <svg width="24" height="24" aria-hidden="true">
+            <use xlink:href="#icon-down"></use>
+          </svg>
+        </span>
+      </button>
       <div class="product-length__inner">
+        <button class="product-length__header length-header">
+          <span class="length-header__label">Ширина</span>
+          <span class="length-header__value">1.5м</span>
+          <span class="length-header__icon" aria-hidden="true">
+            <svg width="24" height="24" aria-hidden="true">
+              <use xlink:href="#icon-down"></use>
+            </svg>
+          </span>
+        </button>
         <div class="product-length__radios">
           <div class="product-length__radio product-radio">
             <label class="product-radio__label" for="product-radio-@@image-1">1.5м</label>
@@ -86,11 +103,6 @@
             <input class="product-radio__input visually-hidden" id="product-radio-@@image-6" name="product-radio-@@image" type="radio" value="#">
           </div>
         </div>
-        <button class="product-length__button" aria-label="#">
-          <svg width="24" height="24" aria-hidden="true">
-            <use xlink:href="#icon-down"></use>
-          </svg>
-        </button>
       </div>
     </div>
     <div class="product-card__bottom product-bottom">
