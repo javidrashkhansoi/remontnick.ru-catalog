@@ -7,6 +7,10 @@
 
   // .catalog__container
   &__container {
+    max-inline-size: variables.container();
+    margin-inline: auto;
+    padding-inline: variables.$padding + px;
+
     > *:last-child {
       margin-block-end: 0;
     }
@@ -80,7 +84,7 @@
     position: fixed;
     inset-block: 0;
     inset-inline-start: 0;
-    z-index: 1000;
+    z-index: 10000001;
     inline-size: min(100%, 360px);
     padding-inline: 16px;
     background-color: variables.$color-white;
@@ -367,12 +371,17 @@
 .catalog-checkboxes {
   display: grid;
   gap: 8px;
-  block-size: calc(24px * 3 + 8px * 2);
-  overflow: hidden;
+
+  &:has(.catalog-checkbox:nth-child(4)) {
+    block-size: calc(24px * 3 + 8px * 2);
+    overflow: hidden;
+  }
 
   // .catalog-checkboxes--show
   &--show {
-    block-size: auto;
+    &:has(.catalog-checkbox:nth-child(4)) {
+      block-size: auto;
+    }
   }
 
   @include mixins.prefers-reduced-motion {
@@ -483,7 +492,7 @@
 }
 
 .more-button {
-  display: flex;
+  display: none;
   justify-content: start;
   align-items: center;
   gap: 10px;
@@ -495,6 +504,10 @@
   line-height: 1.5;
   letter-spacing: 0.04em;
   text-align: start;
+
+  .catalog-checkboxes:has(.catalog-checkbox:nth-child(4)) + & {
+    display: flex;
+  }
 
   @include mixins.prefers-reduced-motion {
     transition-property: color;
@@ -1179,7 +1192,7 @@
         position: fixed;
         inset-block-end: 0;
         inset-inline: 0;
-        z-index: 1000;
+        z-index: 10000000;
         padding: 16px;
         background-color: variables.$color-white;
         overflow-x: hidden;

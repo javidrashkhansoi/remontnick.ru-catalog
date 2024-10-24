@@ -7,6 +7,10 @@
   align-items: center;
   gap: functions.responsive-value(12, 8);
 
+  &:empty {
+    display: none;
+  }
+
   @media (min-width: #{992 + 0.1px}) {
     flex-wrap: wrap;
   }

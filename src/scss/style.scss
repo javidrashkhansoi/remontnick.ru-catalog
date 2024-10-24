@@ -1,11 +1,9 @@
-@use "fonts/fonts";
-@use "reset/reset";
-@use "libraries/libraries";
-@use "ui/ui" with (
-  $selectors: (
-    img
-  )
-);
-@use "layout/layout";
-@use "pages/pages";
-// @use "dialogs/dialogs";
+@use "layout/layout/body";
+
+.main-catalog {
+  @import "fonts/fonts";
+  @import "reset/reset";
+  @import "libraries/libraries";
+  @import "ui/ui";
+  @import "pages/pages";
+}

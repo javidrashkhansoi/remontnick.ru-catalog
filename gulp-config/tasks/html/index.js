@@ -45,7 +45,7 @@ const html = {
       .pipe(_.plumber(config.modules.plumber))
       .pipe(_.fileinclude())
       .pipe(_.webpHtmlNosvg())
-      .pipe(_.htmlmin(config.modules.htmlmin))
+      // .pipe(_.htmlmin(config.modules.htmlmin))
       .pipe(_.replace(/@img\//g, "img/"))
       .pipe(_.versionNumber(config.modules.versionNumber))
       .pipe(_.gulp.dest(config.path.dest));

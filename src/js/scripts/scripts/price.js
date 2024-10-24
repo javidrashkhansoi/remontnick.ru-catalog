@@ -7,8 +7,9 @@ prices.forEach(price => {
 
   price.addEventListener("focus", () => {
     const { value } = price;
+    const formattedValue = +value.replaceAll(/\s/g, "").replaceAll(prefix, "").replaceAll(suffix, "");
 
-    price.value = +value.replaceAll(/\s/g, "").replaceAll(prefix, "").replaceAll(suffix, "") || 0;
+    price.value = formattedValue ? formattedValue : "";
     price.type = "number";
   });
 
@@ -16,6 +17,6 @@ prices.forEach(price => {
     const { value } = price;
 
     price.type = "text";
-    price.value = `${prefix} ${+value || 0} ${suffix}`;
+    price.value = +value ? `${prefix} ${+value} ${suffix}` : "";
   });
 });

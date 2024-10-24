@@ -1,24 +1,24 @@
 <section class="catalog">
-  <div class="catalog__container container">
-    <div class="catalog__header">
+  <div class="catalog__container">
+    <div class="catalog__header" data-tabs>
       <h1 class="catalog__title h1">Линолеум</h1>
-      <nav class="catalog__tabs tab-nav" aria-label="#">
+      <div class="catalog__tabs tab-nav">
         <ul class="tab-nav__list">
           <li class="tab-nav__item">
-            <a class="tab-nav__link tab-nav__link--active" href="" aria-current="page">Часто ищут</a>
+            <button class="tab-nav__link active" data-tab="frequently">Часто ищут</button>
           </li>
           <li class="tab-nav__item">
-            <a class="tab-nav__link" href="#">Производители</a>
+            <button class="tab-nav__link" data-tab="manufacturers">Производители</button>
           </li>
           <li class="tab-nav__item">
-            <a class="tab-nav__link" href="#">Цвет/декор</a>
+            <button class="tab-nav__link" data-tab="color">Цвет/декор</button>
           </li>
           <li class="tab-nav__item">
-            <a class="tab-nav__link" href="#">Ширина рулона</a>
+            <button class="tab-nav__link" data-tab="width">Ширина рулона</button>
           </li>
         </ul>
-      </nav>
-      <ul class="catalog__product-links product-links">
+      </div>
+      <ul class="catalog__product-links product-links" data-panel="frequently">
         <li class="product-links__item">
           <a class="product-links__link" href="#">серый ковролин</a>
         </li>
@@ -31,6 +31,78 @@
         <li class="product-links__item">
           <a class="product-links__link" href="#">ламинат Quick Step</a>
         </li>
+        <li class="product-links__item">
+          <a class="product-links__link" href="#">мармолеум Forbo</a>
+        </li>
+        <li class="product-links__item">
+          <a class="product-links__link" href="#">синий ковролин</a>
+        </li>
+        <li class="product-links__item">
+          <a class="product-links__link" href="#">линолеум Таркетт</a>
+        </li>
+        <li class="product-links__item">
+          <a class="product-links__link" href="#">линолеум IVC</a>
+        </li>
+        <li class="product-links__item">
+          <a class="product-links__link" href="#">Quick Step Impressive Ultra</a>
+        </li>
+        <li class="product-links__item">
+          <a class="product-links__link" href="#">негорючий линолеум (КМ5)</a>
+        </li>
+        <li class="product-links__item">
+          <a class="product-links__link" href="#">искусственная трава в рулонах</a>
+        </li>
+      </ul>
+      <ul class="catalog__product-links product-links" data-panel="manufacturers" hidden>
+        <li class="product-links__item">
+          <a class="product-links__link" href="#">серый ковролин</a>
+        </li>
+        <li class="product-links__item">
+          <a class="product-links__link" href="#">линолеум Грабо</a>
+        </li>
+        <li class="product-links__item">
+          <a class="product-links__link" href="#">ковровая плитка Domo</a>
+        </li>
+        <li class="product-links__item">
+          <a class="product-links__link" href="#">линолеум Таркетт</a>
+        </li>
+        <li class="product-links__item">
+          <a class="product-links__link" href="#">линолеум IVC</a>
+        </li>
+        <li class="product-links__item">
+          <a class="product-links__link" href="#">Quick Step Impressive Ultra</a>
+        </li>
+        <li class="product-links__item">
+          <a class="product-links__link" href="#">негорючий линолеум (КМ5)</a>
+        </li>
+        <li class="product-links__item">
+          <a class="product-links__link" href="#">искусственная трава в рулонах</a>
+        </li>
+      </ul>
+      <ul class="catalog__product-links product-links" data-panel="color" hidden>
+        <li class="product-links__item">
+          <a class="product-links__link" href="#">серый ковролин</a>
+        </li>
+        <li class="product-links__item">
+          <a class="product-links__link" href="#">линолеум Грабо</a>
+        </li>
+        <li class="product-links__item">
+          <a class="product-links__link" href="#">ковровая плитка Domo</a>
+        </li>
+        <li class="product-links__item">
+          <a class="product-links__link" href="#">ламинат Quick Step</a>
+        </li>
+        <li class="product-links__item">
+          <a class="product-links__link" href="#">мармолеум Forbo</a>
+        </li>
+        <li class="product-links__item">
+          <a class="product-links__link" href="#">синий ковролин</a>
+        </li>
+        <li class="product-links__item">
+          <a class="product-links__link" href="#">искусственная трава в рулонах</a>
+        </li>
+      </ul>
+      <ul class="catalog__product-links product-links" data-panel="width" hidden>
         <li class="product-links__item">
           <a class="product-links__link" href="#">мармолеум Forbo</a>
         </li>
@@ -106,12 +178,87 @@
               <div class="catalog-spoilers__region" data-spoiler="region">
                 <div class="catalog-spoilers__inner">
                   <ul class="catalog-spoilers__checkboxes catalog-checkboxes">
-                    @@include("checkbox.html", { "id": 11, "flag": false })
-                    @@include("checkbox.html", { "id": 12, "flag": false })
-                    @@include("checkbox.html", { "id": 13, "flag": false })
-                    @@include("checkbox.html", { "id": 14, "flag": false })
-                    @@include("checkbox.html", { "id": 15, "flag": false })
-                    @@include("checkbox.html", { "id": 16, "flag": false })
+                    <li class="catalog-checkboxes__checkbox catalog-checkbox">
+                      <label class="catalog-checkbox__label" for="catalog-checkbox-[серый ковролин]">
+                        <span class="catalog-checkbox__icon"></span>
+                        <span class="catalog-checkbox__text">серый ковролин</span>
+                      </label>
+                      <input class="catalog-checkbox__input visually-hidden" id="catalog-checkbox-[серый ковролин]" name="catalog-checkbox-[серый ковролин]" type="checkbox" value="#" checked>
+                    </li>
+                    <li class="catalog-checkboxes__checkbox catalog-checkbox">
+                      <label class="catalog-checkbox__label" for="catalog-checkbox-[линолеум Грабо]">
+                        <span class="catalog-checkbox__icon"></span>
+                        <span class="catalog-checkbox__text">линолеум Грабо</span>
+                      </label>
+                      <input class="catalog-checkbox__input visually-hidden" id="catalog-checkbox-[линолеум Грабо]" name="catalog-checkbox-[линолеум Грабо]" type="checkbox" value="#" checked>
+                    </li>
+                    <li class="catalog-checkboxes__checkbox catalog-checkbox">
+                      <label class="catalog-checkbox__label" for="catalog-checkbox-[ковровая плитка Domo]">
+                        <span class="catalog-checkbox__icon"></span>
+                        <span class="catalog-checkbox__text">ковровая плитка Domo</span>
+                      </label>
+                      <input class="catalog-checkbox__input visually-hidden" id="catalog-checkbox-[ковровая плитка Domo]" name="catalog-checkbox-[ковровая плитка Domo]" type="checkbox" value="#"
+                        checked>
+                    </li>
+                    <li class="catalog-checkboxes__checkbox catalog-checkbox">
+                      <label class="catalog-checkbox__label" for="catalog-checkbox-[ламинат Quick Step]">
+                        <span class="catalog-checkbox__icon"></span>
+                        <span class="catalog-checkbox__text">ламинат Quick Step</span>
+                      </label>
+                      <input class="catalog-checkbox__input visually-hidden" id="catalog-checkbox-[ламинат Quick Step]" name="catalog-checkbox-[ламинат Quick Step]" type="checkbox" value="#" checked>
+                    </li>
+                    <li class="catalog-checkboxes__checkbox catalog-checkbox">
+                      <label class="catalog-checkbox__label" for="catalog-checkbox-[мармолеум Forbo]">
+                        <span class="catalog-checkbox__icon"></span>
+                        <span class="catalog-checkbox__text">мармолеум Forbo</span>
+                      </label>
+                      <input class="catalog-checkbox__input visually-hidden" id="catalog-checkbox-[мармолеум Forbo]" name="catalog-checkbox-[мармолеум Forbo]" type="checkbox" value="#" checked>
+                    </li>
+                    <li class="catalog-checkboxes__checkbox catalog-checkbox">
+                      <label class="catalog-checkbox__label" for="catalog-checkbox-[синий ковролин]">
+                        <span class="catalog-checkbox__icon"></span>
+                        <span class="catalog-checkbox__text">синий ковролин</span>
+                      </label>
+                      <input class="catalog-checkbox__input visually-hidden" id="catalog-checkbox-[синий ковролин]" name="catalog-checkbox-[синий ковролин]" type="checkbox" value="#" checked>
+                    </li>
+                    <li class="catalog-checkboxes__checkbox catalog-checkbox">
+                      <label class="catalog-checkbox__label" for="catalog-checkbox-[линолеум Таркетт]">
+                        <span class="catalog-checkbox__icon"></span>
+                        <span class="catalog-checkbox__text">линолеум Таркетт</span>
+                      </label>
+                      <input class="catalog-checkbox__input visually-hidden" id="catalog-checkbox-[линолеум Таркетт]" name="catalog-checkbox-[линолеум Таркетт]" type="checkbox" value="#" checked>
+                    </li>
+                    <li class="catalog-checkboxes__checkbox catalog-checkbox">
+                      <label class="catalog-checkbox__label" for="catalog-checkbox-[линолеум IVC]">
+                        <span class="catalog-checkbox__icon"></span>
+                        <span class="catalog-checkbox__text">линолеум IVC</span>
+                      </label>
+                      <input class="catalog-checkbox__input visually-hidden" id="catalog-checkbox-[линолеум IVC]" name="catalog-checkbox-[линолеум IVC]" type="checkbox" value="#" checked>
+                    </li>
+                    <li class="catalog-checkboxes__checkbox catalog-checkbox">
+                      <label class="catalog-checkbox__label" for="catalog-checkbox-[Quick Step Impressive Ultra]">
+                        <span class="catalog-checkbox__icon"></span>
+                        <span class="catalog-checkbox__text">Quick Step Impressive Ultra</span>
+                      </label>
+                      <input class="catalog-checkbox__input visually-hidden" id="catalog-checkbox-[Quick Step Impressive Ultra]" name="catalog-checkbox-[Quick Step Impressive Ultra]" type="checkbox"
+                        value="#" checked>
+                    </li>
+                    <li class="catalog-checkboxes__checkbox catalog-checkbox">
+                      <label class="catalog-checkbox__label" for="catalog-checkbox-[негорючий линолеум (КМ5)]">
+                        <span class="catalog-checkbox__icon"></span>
+                        <span class="catalog-checkbox__text">негорючий линолеум (КМ5)</span>
+                      </label>
+                      <input class="catalog-checkbox__input visually-hidden" id="catalog-checkbox-[негорючий линолеум (КМ5)]" name="catalog-checkbox-[негорючий линолеум (КМ5)]" type="checkbox"
+                        value="#" checked>
+                    </li>
+                    <li class="catalog-checkboxes__checkbox catalog-checkbox">
+                      <label class="catalog-checkbox__label" for="catalog-checkbox-[искусственная трава в рулонах]">
+                        <span class="catalog-checkbox__icon"></span>
+                        <span class="catalog-checkbox__text">искусственная трава в рулонах</span>
+                      </label>
+                      <input class="catalog-checkbox__input visually-hidden" id="catalog-checkbox-[искусственная трава в рулонах]" name="catalog-checkbox-[искусственная трава в рулонах]"
+                        type="checkbox" value="#" checked>
+                    </li>
                   </ul>
                   <button class="catalog-spoilers__more more-button" type="button">
                     <span class="more-button__text" data-show-text="Показать ещё" data-hide-text="Показать меньше">Показать ещё</span>

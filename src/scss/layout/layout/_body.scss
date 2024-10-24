@@ -2,7 +2,8 @@
 @use "../../mixins/mixins";
 @use "../../variables/variables";
 
-body {
+body:has(.main-catalog) {
+  margin: 0;
   font-family: variables.$font-gotham-pro;
   font-size: functions.responsive-value(16, 14);
   line-height: 1.3;

@@ -41,7 +41,7 @@
     white-space: nowrap;
     border-block-end: 2px solid;
 
-    &:not(&--active) {
+    &:not(.active) {
       border-block-end-color: transparent;
       color: variables.$color-999999;
 
@@ -54,10 +54,6 @@
         color: variables.$color-hover;
         border-block-end-color: currentColor;
       }
-    }
-
-    // .tab-nav__link--active
-    &--active {
     }
 
     @media (min-width: #{768 + 0.1px}) {
