@@ -3,9 +3,11 @@
 @use "../../variables/variables";
 
 .h1 {
+  font-family: variables.$font-gotham-pro !important;
   font-weight: 500;
-  font-size: functions.responsive-value(28, 24);
+  font-size: functions.responsive-value(28, 24) !important;
   line-height: 1.12;
+  color: variables.$color-1d1d1d;
 
   @media (min-width: #{768 + 0.1px}) {
     line-height: 1.25;

@@ -174,8 +174,11 @@
   display: flex;
   align-items: center;
   gap: 4px;
+  font-family: variables.$font-gotham-pro !important;
   font-weight: 500;
+  font-size: functions.responsive-value(16, 14) !important;
   line-height: 1.5;
+  color: variables.$color-1d1d1d;
 
   @media (max-width: 992px) {
     letter-spacing: 0.01em;
@@ -608,9 +611,11 @@
 
     h2 {
       margin-block-end: functions.responsive-value(16, 12);
+      font-family: variables.$font-gotham-pro !important;
       font-weight: 500;
-      font-size: functions.responsive-value(18, 16);
+      font-size: functions.responsive-value(18, 16) !important;
       line-height: 1.5;
+      color: variables.$color-1d1d1d;
 
       @media (min-width: #{768 + 0.1px}) {
         line-height: 1.33;

@@ -10,3 +10,4 @@ import "./scripts/radios.js";
 import "./scripts/actions.js";
 import "./scripts/products-more.js";
 import "./scripts/remove-padding.js";
+import "./scripts/clear.js";
