@@ -44,7 +44,7 @@ const html = {
     return _.gulp.src(config.path.src)
       .pipe(_.plumber(config.modules.plumber))
       .pipe(_.fileinclude())
-      .pipe(_.webpHtmlNosvg())
+      // .pipe(_.webpHtmlNosvg())
       // .pipe(_.htmlmin(config.modules.htmlmin))
       .pipe(_.replace(/@img\//g, "img/"))
       .pipe(_.versionNumber(config.modules.versionNumber))

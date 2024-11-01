@@ -39,7 +39,7 @@ const scss = {
       .pipe(_.plumber(config.modules.plumber))
       .pipe(_.gulpSass(_.sass)())
       .pipe(_.replace(/@img\//g, "../img/"))
-      .pipe(_.webpcss(config.modules.webpcss))
+      // .pipe(_.webpcss(config.modules.webpcss))
       .pipe(_.autoPrefixer())
       .pipe(_.groupCssMediaQueries())
       .pipe(_.gulp.dest(config.path.dest))

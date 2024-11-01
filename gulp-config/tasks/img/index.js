@@ -46,7 +46,7 @@ const img = {
   ["img-raster-webp"]() {
     return _.gulp.src(config.path.raster)
       .pipe(_.plumber(config.modules.plumber))
-      .pipe(_.webp())
+      // .pipe(_.webp())
       .pipe(_.gulp.dest(config.path.dest));
   },
   ["img-vector-dev"]() {
