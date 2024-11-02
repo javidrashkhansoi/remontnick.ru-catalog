@@ -32,4 +32,16 @@
   // .sort__select
   &__select {
   }
+
+  select {
+    appearance: none;
+    inline-size: 32px;
+    block-size: functions.responsive-value(44, 32);
+    font-size: 0;
+    background-color: variables.$color-ededed;
+
+    @media (min-width: #{992 + 0.1px}) {
+      inline-size: 200px;
+    }
+  }
 }
