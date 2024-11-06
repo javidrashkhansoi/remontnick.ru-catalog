@@ -85,10 +85,6 @@
     gap: 4px;
     grid-area: badges;
 
-    .products-list--grid & {
-      display: none;
-    }
-
     @media (min-width: #{992 + 0.1px}) {
       position: relative;
       z-index: 2;
@@ -103,6 +99,10 @@
     @media (max-width: 992px) {
       flex-wrap: wrap;
       margin-block: 16px 8px;
+
+      .products-list--grid & {
+        display: none;
+      }
     }
   }
 
